@@ -36,8 +36,16 @@ test('Performs several basic mathematical functions.', () => {
   expect(subtract(2, 1)).toBe(1);
   expect(divide(100, 2)).toBe(50);
   expect(multiply(2, 2)).toBe(4);
-})
+});
 
 //caesarCipher
+
+import { caesarCipher } from "./caesarCipher.js";
+
+test("Converts a string using the Caesar cipher by a given number.", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
 
 //analyzeArray
